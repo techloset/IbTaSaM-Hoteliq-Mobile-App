@@ -1,10 +1,10 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
-export default function AccountScreen() {
+export default function AccountprofileScreenScreen() {
   return (
     <View style={style.header}>
-      <Text style={style.title}>Account Screen</Text>
+      <Text style={style.title}>Profile Screen</Text>
     </View>
   );
 }

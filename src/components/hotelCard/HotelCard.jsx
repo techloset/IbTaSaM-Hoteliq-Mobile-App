@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Favorite from '../../img/homeImg/favorite.svg';
-import Star from '../../img/homeImg/star.svg';
-import HeartIcon from '../../img/homeImg/IconHeart.svg';
+import Favorite from '../../img/favorite.svg';
+import Star from '../../img/star.svg';
+import HeartIcon from '../../img/IconHeart.svg';
 import {useNavigation} from '@react-navigation/native';
 
 import {

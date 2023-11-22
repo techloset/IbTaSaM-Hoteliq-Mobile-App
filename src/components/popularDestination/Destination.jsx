@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Star from '../../img/homeImg/star.svg';
+import Star from '../../img/star.svg';
 import {
   widthPixel,
   heightPixel,
@@ -40,7 +40,7 @@ export default function Destination() {
             }}>
             <View style={{height: heightPixel(84), width: widthPixel(84)}}>
               <Image
-                source={require('../../img/homeImg/desti.png')}
+                source={require('../../assets/img/desti.png')}
                 style={styles.mainImg}
               />
             </View>

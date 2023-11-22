@@ -8,9 +8,9 @@ import {
   FlatList,
 } from 'react-native';
 
-import Location from '../../img/homeImg/location.svg';
-import ArrowDown from '../../img/homeImg/arrow-down.svg';
-import Noti from '../../img/homeImg/noti.svg';
+import Location from '../../assets/svg/location.svg';
+import ArrowDown from '../../assets/svg/arrow-down.svg';
+import Noti from '../../assets/svg/noti.svg';
 
 import {
   widthPixel,

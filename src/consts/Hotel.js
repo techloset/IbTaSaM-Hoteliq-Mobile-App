@@ -4,10 +4,8 @@ const hotels = [
     name: 'The Aston Vill Hotel',
     location: 'Alice Springs NT 0870, Australia',
     price: 200.7,
-    image: require('../img/homeImg/hotel1.png'),
-    // image:require('../SVG/CardImg'),
-    heart: require('../img/homeImg/favorite.svg'),
-
+    image: require('../assets/img/hotel1.png'),
+    heart: require('../img/favorite.svg'),
     details: `Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming `,
   },
   {
@@ -15,8 +13,8 @@ const hotels = [
     name: 'Golden Pelece Hotel',
     location: 'Nothern Territory 0872, Australia',
     price: 175.3,
-    image: require('../img/homeImg/hotel2.png'),
-    heart: require('../img/homeImg/favorite.svg'),
+    image: require('../assets/img/hotel2.png'),
+    heart: require('../img/favorite.svg'),
     details: `Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming `,
   },
   {
@@ -24,8 +22,8 @@ const hotels = [
     name: 'The Aston Vill Hotel',
     location: 'Alice Springs NT 0870, Australia',
     price: 165.3,
-    image: require('../img/homeImg/hotel1.png'),
-    heart: require('../img/homeImg/favorite.svg'),
+    image: require('../assets/img/hotel1.png'),
+    heart: require('../img/favorite.svg'),
     details: `Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming `,
   },
   {
@@ -33,8 +31,8 @@ const hotels = [
     name: 'Golden Pelece Hotel',
     location: 'Nothern Territory 0872, Australia',
     price: 200,
-    image: require('../img/homeImg/hotel2.png'),
-    heart: require('../img/homeImg/favorite.svg'),
+    image: require('../assets/img/hotel2.png'),
+    heart: require('../img/favorite.svg'),
     details: `Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming `,
   },
 ];

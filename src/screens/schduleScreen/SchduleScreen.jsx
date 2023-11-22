@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   ScrollView,
   StatusBar,
@@ -10,12 +11,15 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Back from '../../img/homeImg/Iconlying.svg';
-import Setting from '../../img/homeImg/setting-2.svg';
+
+import Back from '../../assets/svg/Iconlying.svg';
+import Setting from '../../assets/svg/setting-2.svg';
+import RightVector from '../../assets/svg/Vector.svg';
+import LeftVector from '../../assets/svg/Vector1.svg';
+
 import {Calendar} from 'react-native-calendars';
 import {useState} from 'react';
-import RightVector from '../../img/homeImg/Vector.svg';
-import LeftVector from '../../img/homeImg/Vector1.svg';
+
 import {
   fontPixel,
   heightPixel,
@@ -23,6 +27,7 @@ import {
   pixelSizeVertical,
   widthPixel,
 } from '../../utils/ResponsiveStyle';
+
 import Schedule from '../../components/schdule/Schdule';
 
 const SchduleScreen = ({navigation, route}) => {

@@ -6,14 +6,15 @@ import HomeScreen from './src/screens/homeScreen/HomeScreen';
 import DetailScreen from './src/screens/detailScreen/DetailScreen';
 import AccountScreen from './src/screens/accountScreen/AccountScreen';
 import SchduleScreen from './src/screens/schduleScreen/SchduleScreen';
+import profileScreen from './src/screens/profileScreen/profileScreen';
 
 import HomeTab from './src/components/homeTabBtn/HomeBtn';
 import ScheduleBtn from './src/components/scheduleTabBtn/ScheduleBtn';
 
-import BookMark from './src/img/homeImg/bookmark.svg';
-import Account from './src/img/homeImg/profile.svg';
-import Calendar from './src/img/homeImg/calendar.svg';
-import House from './src/img/homeImg/Appointment.svg';
+import BookMark from './src/assets/svg/bookmark.svg';
+import Account from './src/assets/svg/profile.svg';
+import Calendar from './src/assets/svg/calendar.svg';
+import House from './src/assets/svg/Appointment.svg';
 
 import {
   heightPixel,
@@ -59,7 +60,7 @@ const HomeTabs = () => {
           }}
         />
         <Tab.Screen
-          name="Detailjkj"
+          name="Account"
           component={AccountScreen}
           options={{
             tabBarLabel: '',
@@ -69,7 +70,7 @@ const HomeTabs = () => {
 
         <Tab.Screen
           name="account"
-          component={AccountScreen}
+          component={profileScreen}
           options={{
             tabBarLabel: '',
             tabBarIcon: ({color, size}) => <Account />,

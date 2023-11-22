@@ -1,9 +1,10 @@
 import React from 'react';
 import {StyleSheet, View, Pressable, Text} from 'react-native';
 
-import House from '../../img/homeImg/house.svg';
-import Shop from '../../img/homeImg/shop.svg';
-import Coffee from '../../img/homeImg/coffee.svg';
+import House from '../../assets/svg/house.svg';
+import Shop from '../../assets/svg/shop.svg';
+import Coffee from '../../assets/svg/coffee.svg';
+
 import COLORS from '../../consts/Color';
 
 import {

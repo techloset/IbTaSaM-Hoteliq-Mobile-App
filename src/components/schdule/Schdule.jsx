@@ -2,8 +2,8 @@ import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import COLORS from '../../consts/Color';
-import Slocation from '../../img/homeImg/Slocation.svg';
-import Scalender from '../../img/homeImg/Scalendar.svg';
+import Slocation from '../../img/Slocation.svg';
+import Scalender from '../../img/Scalendar.svg';
 import {
   fontPixel,
   pixelSizeHorizontal,
@@ -22,7 +22,7 @@ export default function Schedule() {
           <View style={{flexDirection: 'row', flex: 1}}>
             <View style={{height: 84, width: 84, marginLeft: 12}}>
               <Image
-                source={require('../../img/homeImg/desti.png')}
+                source={require('../../assets/img/desti.png')}
                 style={styles.mainImg}
               />
             </View>
@@ -74,7 +74,7 @@ export default function Schedule() {
           <View style={{flexDirection: 'row', flex: 1}}>
             <View style={{height: 84, width: 84, marginLeft: 12}}>
               <Image
-                source={require('../../img/homeImg/hotel2.png')}
+                source={require('../../assets/img/hotel2.png')}
                 style={styles.mainImg}
               />
             </View>

@@ -1,7 +1,7 @@
 import {TextInput, StyleSheet, View} from 'react-native';
-import Search from '../../img/homeImg/search-normal.svg';
+import Search from '../../img/search-normal.svg';
 import COLORS from '../../consts/Color';
-import SlideIcon from '../../img/homeImg/Icon.svg';
+import SlideIcon from '../../img/Icon.svg';
 import {SearchButton} from '../searchButton/SearchButton';
 
 import {

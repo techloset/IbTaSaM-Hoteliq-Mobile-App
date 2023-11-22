@@ -11,12 +11,14 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Back from '../../img/homeImg/Iconlying.svg';
-import Menu from '../../img/homeImg/more.svg';
-import Location from '../../img/homeImg/location.svg';
-import bgImg from '../../img/homeImg/hotel1.png';
+
+import Back from '../../assets/svg/Iconlying.svg';
+import Menu from '../../assets/svg/more.svg';
+import Location from '../../i../../assets/svg/ocation.svg';
+import Heart from '../../assets/svg/favorite.svg';
+import bgImg from '../../assets/img/hotel1.png';
+
 import DetailsButton from '../../components/detailsButton/DetailsButton';
-import Heart from '../../img/homeImg/favorite.svg';
 
 import {
   widthPixel,
@@ -26,9 +28,7 @@ import {
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
 
-export default function DetailScreen({navigation, route}) {
-  const items = route;
-
+export default function DetailScreen({navigation}) {
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={styles.header}>
@@ -130,7 +130,7 @@ export default function DetailScreen({navigation, route}) {
           <Text style={styles.preview}>Preview</Text>
           <View style={styles.previewImg}>
             <Image
-              source={require('../../img/homeImg/preview1.png')}
+              source={require('../../assets/img/preview1.png')}
               style={{
                 width: widthPixel(98),
                 height: heightPixel(82),
@@ -139,7 +139,7 @@ export default function DetailScreen({navigation, route}) {
             />
 
             <Image
-              source={require('../../img/homeImg/preview2.png')}
+              source={require('../../assets/img/preview2.png')}
               style={{
                 width: widthPixel(98),
                 height: heightPixel(82),
@@ -147,7 +147,7 @@ export default function DetailScreen({navigation, route}) {
               }}
             />
             <Image
-              source={require('../../img/homeImg/preview3.png')}
+              source={require('../../assets/img/preview3.png')}
               style={{
                 width: widthPixel(98),
                 height: heightPixel(82),
@@ -157,11 +157,10 @@ export default function DetailScreen({navigation, route}) {
           </View>
         </View>
 
-        <View style={styles.btn}>
+        <View>
           <TouchableOpacity
-            onPress={() => {
-              navigation.navigate('Schdule');
-            }}>
+            style={styles.btn}
+            onPress={() => navigation.navigate('Schedule')}>
             <Text style={styles.BtnColor}>Booking Now</Text>
           </TouchableOpacity>
         </View>
@@ -266,6 +265,5 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(18),
     lineHeight: fontPixel(18),
     fontFamily: 'PlusJakartaSans-Bold',
-    // lineHeight:21,
   },
 });
