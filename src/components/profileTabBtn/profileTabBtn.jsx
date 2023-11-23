@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Home2 from '../../assets/svg/home-2.svg';
+import Profile from '../../assets/svg/profile2.svg';
 import COLORS from '../../consts/Color';
 import {
   fontPixel,
@@ -8,10 +8,10 @@ import {
   pixelSizeVertical,
 } from '../../utils/ResponsiveStyle';
 
-const ScheduleBtn = () => {
+const ProfileBtn = () => {
   return (
     <View style={styles.Btn}>
-      <Home2 />
+      <Profile />
       <Text
         style={{
           color: '#4C4DDC',
@@ -19,13 +19,13 @@ const ScheduleBtn = () => {
           fontSize: fontPixel(12),
           fontWeight: 600,
         }}>
-        Schedule
+        Profile
       </Text>
     </View>
   );
 };
 
-export default ScheduleBtn;
+export default ProfileBtn;
 
 const styles = StyleSheet.create({
   Btn: {

@@ -1,8 +1,8 @@
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
-import Wifi from '../../img/wifi.svg';
-import Coffee1 from '../../img/coffee1.svg';
-import Star from '../../img/star.svg';
+import Wifi from '../../assets/svg/wifi.svg';
+import Coffee1 from '../../assets/svg/coffee1.svg';
+import Star from '../../assets/svg/star.svg';
 import {
   fontPixel,
   heightPixel,

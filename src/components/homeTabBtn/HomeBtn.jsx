@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Home2 from '../../img/home-2.svg';
+import Home2 from '../../assets/svg/home-2.svg';
 import COLORS from '../../consts/Color';
 import {
   fontPixel,

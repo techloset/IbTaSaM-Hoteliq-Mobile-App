@@ -14,7 +14,7 @@ import COLORS from '../../consts/Color';
 
 import Back from '../../assets/svg/Iconlying.svg';
 import Menu from '../../assets/svg/more.svg';
-import Location from '../../i../../assets/svg/ocation.svg';
+import Location from '../../assets/svg/location.svg';
 import Heart from '../../assets/svg/favorite.svg';
 import bgImg from '../../assets/img/hotel1.png';
 

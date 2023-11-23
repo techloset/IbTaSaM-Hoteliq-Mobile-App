@@ -30,7 +30,7 @@ import {
 
 import Schedule from '../../components/schdule/Schdule';
 
-const SchduleScreen = ({navigation, route}) => {
+const SchduleScreen = ({navigation}) => {
   const renderCustomArrow = (direction, onPress) => {
     const imageSource = direction === 'left' ? <LeftVector /> : <RightVector />;
     return (
@@ -39,8 +39,6 @@ const SchduleScreen = ({navigation, route}) => {
       </TouchableOpacity>
     );
   };
-
-  const items = route.params;
 
   const [selected, setSelected] = useState('2023-04-19');
 

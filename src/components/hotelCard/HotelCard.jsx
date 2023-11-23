@@ -9,9 +9,9 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Favorite from '../../img/favorite.svg';
-import Star from '../../img/star.svg';
-import HeartIcon from '../../img/IconHeart.svg';
+import Favorite from '../../assets/svg/favorite.svg';
+import Star from '../../assets/svg/star.svg';
+import HeartIcon from '../../assets/svg/IconHeart.svg';
 import {useNavigation} from '@react-navigation/native';
 
 import {
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
   number: {
     color: COLORS.black,
     fontSize: fontPixel(12),
-
     fontFamily: 'PlusJakartaSans-Bold',
   },
   mainimg: {

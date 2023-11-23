@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 import COLORS from '../../consts/Color';
-import Star from '../../img/star.svg';
+import Star from '../../assets/svg/star.svg';
 import {
   widthPixel,
   heightPixel,

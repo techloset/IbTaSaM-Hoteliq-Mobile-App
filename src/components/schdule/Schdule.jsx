@@ -2,8 +2,8 @@ import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import COLORS from '../../consts/Color';
-import Slocation from '../../img/Slocation.svg';
-import Scalender from '../../img/Scalendar.svg';
+import Slocation from '../../assets/svg/Slocation.svg';
+import Scalender from '../../assets/svg/Scalendar.svg';
 import {
   fontPixel,
   pixelSizeHorizontal,
