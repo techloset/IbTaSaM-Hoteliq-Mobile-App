@@ -21,6 +21,7 @@ import {
   pixelSizeVertical,
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
+import FONT_FAMILY from '../../consts/Fonts';
 
 const {width} = Dimensions.get('window');
 const cardWidth = width / 1.4;
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
   number: {
     color: COLORS.black,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   mainimg: {
     width: '100%',
@@ -103,13 +104,13 @@ const styles = StyleSheet.create({
   },
   hotelname: {
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     color: COLORS.black,
   },
   hotellocation: {
     color: COLORS.grey,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
     marginTop: pixelSizeVertical(8),
   },
   mainprice: {
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
   cardprice: {
     color: COLORS.$color,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   starwala: {flexDirection: 'row', alignItems: 'center', gap: 9},
 });

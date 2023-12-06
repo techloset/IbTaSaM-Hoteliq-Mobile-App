@@ -29,6 +29,7 @@ import {
 } from '../../utils/ResponsiveStyle';
 
 import Schedule from '../../components/schdule/Schdule';
+import FONT_FAMILY from '../../consts/Fonts';
 
 const SchduleScreen = ({navigation}) => {
   const renderCustomArrow = (direction, onPress) => {
@@ -126,7 +127,6 @@ const SchduleScreen = ({navigation}) => {
             }}
             onDayPress={day => {
               setSelected(day.dateString);
-              console.log(day);
             }}
           />
         </View>
@@ -145,9 +145,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   Toptext: {
-    color: '#101010',
+    color: COLORS.black,
     fontSize: fontPixel(16),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
 });
 

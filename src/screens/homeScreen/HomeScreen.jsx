@@ -1,5 +1,4 @@
 import {
-  Image,
   StatusBar,
   StyleSheet,
   Text,
@@ -13,11 +12,11 @@ import ArrowDown from '../../assets/svg/arrow-down.svg';
 import Noti from '../../assets/svg/noti.svg';
 
 import {
-  widthPixel,
-  heightPixel,
   fontPixel,
   pixelSizeVertical,
   pixelSizeHorizontal,
+  heightPixel,
+  widthPixel,
 } from '../../utils/ResponsiveStyle';
 
 import COLORS from '../../consts/Color';
@@ -26,11 +25,18 @@ import {InputIcon} from '../../components/inputIcon/InputIcon';
 import hotels from '../../consts/Hotel';
 import {HotelCard} from '../../components/hotelCard/HotelCard';
 import Destination from '../../components/popularDestination/Destination';
+import FONT_FAMILY from '../../consts/Fonts';
 
 export default HomeScreen = () => {
   const [showItems, setShowItems] = useState(false);
   const handleSlideIconPress = () => {
     setShowItems(!showItems);
+  };
+
+  const [showView, setShowView] = useState(false);
+
+  const handleShowView = () => {
+    setShowView(!showView);
   };
 
   return (
@@ -48,7 +54,7 @@ export default HomeScreen = () => {
               <View style={styles.Location1}>
                 <Location style={{marginTop: 5}} />
                 <Text style={styles.innerText}>Wallace, Australia</Text>
-                <ArrowDown style={{marginTop: 5}} />
+                <ArrowDown style={{marginTop: 5}} onPress={handleShowView} />
               </View>
             </View>
             <View
@@ -63,11 +69,24 @@ export default HomeScreen = () => {
               <Noti />
             </View>
           </View>
+          {showView ? (
+            <View style={styles.dropDown}>
+              <View style={styles.Location1}>
+                <Location />
+                <Text style={{marginLeft: 5}}>Wallace, Australia</Text>
+              </View>
+              <View style={styles.Location1}>
+                <Location />
+                <Text style={{marginLeft: 5}}>Wallace, Australia</Text>
+              </View>
+            </View>
+          ) : (
+            <View></View>
+          )}
           <View
             style={{
               marginHorizontal: pixelSizeHorizontal(20),
-              paddingTop: showItems ? 32 : 24,
-              paddingBottom: showItems ? 32 : 24,
+              paddingVertical: showItems ? 32 : 24,
             }}>
             <InputIcon
               showItems={showItems}
@@ -129,14 +148,30 @@ const styles = StyleSheet.create({
   cuurentLocation: {
     color: COLORS.grey,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
+  },
+  dropDown: {
+    marginHorizontal: pixelSizeHorizontal(80),
+    paddingVertical: pixelSizeVertical(5),
+    position: 'absolute',
+    top: heightPixel(110),
+    width: widthPixel(200),
+    backgroundColor: COLORS.white,
+    zIndex: 2,
+    gap: 7,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 4,
+    borderColor: COLORS.borderGrey,
+    borderRadius: 8,
+    borderWidth: 2,
   },
   innerText: {
     color: COLORS.black,
     paddingLeft: pixelSizeHorizontal(10),
     paddingRight: pixelSizeHorizontal(5),
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   container1: {
     paddingHorizontal: pixelSizeHorizontal(24),
@@ -151,11 +186,11 @@ const styles = StyleSheet.create({
   NearbyLocation: {
     color: COLORS.black,
     fontSize: fontPixel(16),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   see: {
     color: COLORS.lightBlue,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
 });

@@ -11,6 +11,7 @@ import {
   widthPixel,
 } from '../../utils/ResponsiveStyle';
 import COLORS from '../../consts/Color';
+import FONT_FAMILY from '../../consts/Fonts';
 
 const DetailsButton = () => {
   return (
@@ -59,8 +60,8 @@ const styles = StyleSheet.create({
   },
   text: {
     paddingLeft: pixelSizeHorizontal(8),
-    color: '#101010',
+    color: COLORS.black,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
 });

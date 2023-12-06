@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   ImageBackground,
@@ -27,8 +27,19 @@ import {
   pixelSizeVertical,
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
+import FONT_FAMILY from '../../consts/Fonts';
 
 export default function DetailScreen({navigation}) {
+  const [text, setText] = useState(
+    'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming ',
+  );
+
+  const onPressTitle = () => {
+    setText(
+      'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. ',
+    );
+  };
+
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={styles.header}>
@@ -92,7 +103,7 @@ export default function DetailScreen({navigation}) {
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
             <Text style={styles.d4}>
               $200,7
-              <Text style={{color: '#878787', fontSize: fontPixel(14)}}>
+              <Text style={{color: COLORS.grey, fontSize: fontPixel(14)}}>
                 /night
               </Text>
             </Text>
@@ -105,15 +116,14 @@ export default function DetailScreen({navigation}) {
 
         <View style={styles.text}>
           <Text style={styles.d6}>Description</Text>
-          <Text style={styles.d7}>
-            Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel.
-            elegant 5 star hotel overlooking the sea. perfect for a romantic,
-            charming
+          <Text style={styles.d7} onPress={onPressTitle}>
+            {text}
             <Text
               style={{
-                color: '#4C4DDC',
+                color: COLORS.lightBlue,
                 fontSize: fontPixel(12),
-                fontFamily: 'PlusJakartaSans-Bold',
+                fontFamily: FONT_FAMILY.plusJakartaSansBold,
+                marginLeft: fontPixel(12),
               }}>
               Read More. . .
             </Text>
@@ -206,9 +216,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   Toptext: {
-    color: '#101010',
+    color: COLORS.black,
     fontSize: fontPixel(16),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   detailsText: {
     flexDirection: 'row',
@@ -216,8 +226,8 @@ const styles = StyleSheet.create({
   },
   d1: {
     fontSize: fontPixel(16),
-    fontFamily: 'PlusJakartaSans-Bold',
-    color: '#101010',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
+    color: COLORS.black,
   },
   d2: {
     flexDirection: 'row',
@@ -225,24 +235,24 @@ const styles = StyleSheet.create({
     paddingTop: pixelSizeVertical(8),
   },
   d3: {
-    color: '#878787',
+    color: COLORS.grey,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Regular',
+    fontFamily: FONT_FAMILY.plusJakartaSansRegular,
   },
   d4: {
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     color: COLORS.lightBlue,
   },
   text: {marginTop: pixelSizeVertical(16)},
   d6: {
-    color: '#101010',
+    color: COLORS.black,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   d7: {
-    fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Regular',
+    fontSize: fontPixel(14),
+    fontFamily: FONT_FAMILY.plusJakartaSansRegular,
     color: COLORS.grey,
     paddingTop: pixelSizeVertical(12),
     lineHeight: fontPixel(18),
@@ -250,8 +260,8 @@ const styles = StyleSheet.create({
   },
   preview: {
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
-    color: '#101010',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
+    color: COLORS.black,
   },
   previewImg: {
     flex: 1,
@@ -264,6 +274,6 @@ const styles = StyleSheet.create({
     color: COLORS.white,
     fontSize: fontPixel(18),
     lineHeight: fontPixel(18),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
 });

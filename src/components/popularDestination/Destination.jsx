@@ -3,7 +3,6 @@ import {
   View,
   Text,
   Image,
-  ScrollView,
   StyleSheet,
   Dimensions,
 } from 'react-native';
@@ -17,6 +16,7 @@ import {
   pixelSizeVertical,
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
+import FONT_FAMILY from '../../consts/Fonts';
 
 const {width} = Dimensions.get('window');
 const {height} = Dimensions.get('window');
@@ -88,26 +88,26 @@ const styles = StyleSheet.create({
     color: COLORS.grey,
     fontSize: fontPixel(12),
     marginTop: 0,
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
   dollersText: {
     color: COLORS.black,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     lineHeight: fontPixel(21),
     paddingRight: 15,
   },
   dollers: {
     color: COLORS.$color,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   number: {
     color: COLORS.black,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     alignSelf: 'baseline',
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     width: widthPixel(21),
     height: heightPixel(18),
   },
@@ -117,14 +117,14 @@ const styles = StyleSheet.create({
     marginHorizontal: pixelSizeHorizontal(24),
   },
   maintext: {
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     color: COLORS.black,
     fontSize: fontPixel(16),
   },
   mainsee: {
     color: COLORS.lightBlue,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
   maindest: {
     backgroundColor: 'white',
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     height: heightPixel(108),
   },
   mainImg: {
-    width: '100%',
+    width: "100%",
     height: '100%',
     borderRadius: 4,
     resizeMode: 'contain',

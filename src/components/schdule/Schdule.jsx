@@ -9,6 +9,7 @@ import {
   pixelSizeHorizontal,
   pixelSizeVertical,
 } from '../../utils/ResponsiveStyle';
+import FONT_FAMILY from '../../consts/Fonts';
 export default function Schedule() {
   return (
     <SafeAreaView>
@@ -133,23 +134,23 @@ const styles = StyleSheet.create({
   Text: {
     color: COLORS.black,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   location: {
     color: COLORS.grey,
     fontSize: fontPixel(12),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
   dollersText: {
     color: COLORS.black,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     gap: 10,
   },
   dollers: {
     color: COLORS.$color,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
   main: {
     flexDirection: 'row',
@@ -157,14 +158,14 @@ const styles = StyleSheet.create({
     marginHorizontal: pixelSizeHorizontal(24),
   },
   maintext: {
-    fontFamily: 'PlusJakartaSans-Bold',
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
     color: COLORS.black,
     fontSize: fontPixel(16),
   },
   mainsee: {
     color: COLORS.lightBlue,
     fontSize: fontPixel(14),
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
   },
   maindest: {
     backgroundColor: 'white',

@@ -15,7 +15,7 @@ import {
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle';
 
-export const SearchButton = setShowItems => {
+export const SearchButton = () => {
   return (
     <>
       <View
@@ -26,15 +26,13 @@ export const SearchButton = setShowItems => {
         }}>
         <Pressable style={styles.PressableHouse}>
           <House width={widthPixel(20)} height={heightPixel(20)} />
-          <Text style={{color: 'white', fontSize: fontPixel(14)}}>Hotel</Text>
+          <Text style={{color: COLORS.white, fontSize: fontPixel(14)}}>Hotel</Text>
         </Pressable>
         <Pressable style={styles.PressableShop}>
           <Shop width={widthPixel(20)} height={heightPixel(20)} />
-          <Pressable onPress={() => setShowItems(false)} style={{}}>
-            <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
-              Market
-            </Text>
-          </Pressable>
+          <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
+            Market
+          </Text>
         </Pressable>
         <Pressable style={styles.PressableCoffee}>
           <Coffee width={widthPixel(20)} height={heightPixel(20)} />

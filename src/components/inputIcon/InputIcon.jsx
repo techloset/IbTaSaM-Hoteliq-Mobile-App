@@ -10,8 +10,9 @@ import {
   pixelSizeVertical,
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle';
+import FONT_FAMILY from '../../consts/Fonts';
 
-export const InputIcon = ({showItems, setShowItems, handleSlideIconPress}) => {
+export const InputIcon = ({showItems, handleSlideIconPress}) => {
   return (
     <>
       {!showItems ? (
@@ -26,7 +27,7 @@ export const InputIcon = ({showItems, setShowItems, handleSlideIconPress}) => {
         </View>
       ) : (
         <View>
-          <SearchButton setShowItems={setShowItems} />
+          <SearchButton />
         </View>
       )}
     </>
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: pixelSizeHorizontal(12),
   },
   input: {
-    fontFamily: 'PlusJakartaSans-Medium',
+    fontFamily: FONT_FAMILY.plusJakartaSansMedium,
     flex: 1,
     fontSize: fontPixel(14),
     height: heightPixel(52),

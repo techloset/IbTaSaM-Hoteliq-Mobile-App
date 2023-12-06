@@ -14,7 +14,7 @@ const AccountBtn = () => {
       <Bookmark2 />
       <Text
         style={{
-          color: '#4C4DDC',
+          color: COLORS.lightBlue,
           paddingTop: pixelSizeVertical(3),
           fontSize: fontPixel(12),
           fontWeight: 600,
