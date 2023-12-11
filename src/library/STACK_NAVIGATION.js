@@ -8,7 +8,7 @@ const STACK_NAVIGATION = [
     component: BottomNavigator,
   },
   {
-    screenName: SCREENS.Detail,
+    screenName: SCREENS.DETAIL,
     component: DetailScreen,
   },
 ];

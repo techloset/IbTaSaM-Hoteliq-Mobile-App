@@ -57,15 +57,7 @@ export default HomeScreen = () => {
                 <ArrowDown style={{marginTop: 5}} onPress={handleShowView} />
               </View>
             </View>
-            <View
-              style={{
-                borderColor: COLORS.borderGrey,
-                alignItems: 'center',
-                borderWidth: 1,
-                borderRadius: 8,
-                paddingVertical: pixelSizeVertical(8),
-                paddingHorizontal: pixelSizeHorizontal(8),
-              }}>
+            <View style={styles.notiStyle}>
               <Noti />
             </View>
           </View>
@@ -73,11 +65,11 @@ export default HomeScreen = () => {
             <View style={styles.dropDown}>
               <View style={styles.Location1}>
                 <Location />
-                <Text style={{marginLeft: 5}}>Wallace, Australia</Text>
+                <Text style={{marginLeft: 5}}>Nuziland, Bibuli</Text>
               </View>
               <View style={styles.Location1}>
                 <Location />
-                <Text style={{marginLeft: 5}}>Wallace, Australia</Text>
+                <Text style={{marginLeft: 5}}>Jojin, titan</Text>
               </View>
             </View>
           ) : (
@@ -133,6 +125,14 @@ export default HomeScreen = () => {
 };
 
 const styles = StyleSheet.create({
+  notiStyle: {
+    borderColor: COLORS.borderGrey,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 8,
+    paddingVertical: pixelSizeVertical(8),
+    paddingHorizontal: pixelSizeHorizontal(8),
+  },
   header: {
     marginTop: pixelSizeVertical(60),
     flexDirection: 'row',

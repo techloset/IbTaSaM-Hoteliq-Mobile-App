@@ -28,6 +28,7 @@ import {
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
 import FONT_FAMILY from '../../consts/Fonts';
+import SCREENS from '../../library/SCREENS';
 
 export default function DetailScreen({navigation}) {
   const [text, setText] = useState(
@@ -92,12 +93,7 @@ export default function DetailScreen({navigation}) {
           <DetailsButton />
         </View>
       </View>
-      <View
-        style={{
-          marginHorizontal: pixelSizeHorizontal(24),
-          flex: 0.23,
-          marginTop: pixelSizeVertical(16),
-        }}>
+      <View style={styles.mainstyle1}>
         <View style={styles.detailsText}>
           <Text style={styles.d1}>The Aston Vill Hotel</Text>
           <View style={{flexDirection: 'row', justifyContent: 'center'}}>
@@ -118,51 +114,26 @@ export default function DetailScreen({navigation}) {
           <Text style={styles.d6}>Description</Text>
           <Text style={styles.d7} onPress={onPressTitle}>
             {text}
-            <Text
-              style={{
-                color: COLORS.lightBlue,
-                fontSize: fontPixel(12),
-                fontFamily: FONT_FAMILY.plusJakartaSansBold,
-                marginLeft: fontPixel(12),
-              }}>
-              Read More. . .
-            </Text>
+            <Text style={styles.readStyle}>Read More. . .</Text>
           </Text>
         </View>
       </View>
-      <View
-        style={{
-          flex: 0.29,
-          marginHorizontal: pixelSizeHorizontal(24),
-          marginTop: pixelSizeVertical(16),
-        }}>
+      <View style={styles.mainstyle2}>
         <View style={styles.d8}>
           <Text style={styles.preview}>Preview</Text>
           <View style={styles.previewImg}>
             <Image
               source={require('../../assets/img/preview1.png')}
-              style={{
-                width: widthPixel(98),
-                height: heightPixel(82),
-                borderRadius: 5,
-              }}
+              style={styles.imgStyle}
             />
 
             <Image
               source={require('../../assets/img/preview2.png')}
-              style={{
-                width: widthPixel(98),
-                height: heightPixel(82),
-                borderRadius: 5,
-              }}
+              style={styles.imgStyle}
             />
             <Image
               source={require('../../assets/img/preview3.png')}
-              style={{
-                width: widthPixel(98),
-                height: heightPixel(82),
-                borderRadius: 5,
-              }}
+              style={styles.imgStyle}
             />
           </View>
         </View>
@@ -170,7 +141,7 @@ export default function DetailScreen({navigation}) {
         <View>
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => navigation.navigate('Schedule')}>
+            onPress={() => navigation.navigate(SCREENS.SCHDULE)}>
             <Text style={styles.BtnColor}>Booking Now</Text>
           </TouchableOpacity>
         </View>
@@ -180,6 +151,27 @@ export default function DetailScreen({navigation}) {
 }
 
 const styles = StyleSheet.create({
+  mainstyle1: {
+    marginHorizontal: pixelSizeHorizontal(24),
+    flex: 0.23,
+    marginTop: pixelSizeVertical(16),
+  },
+  mainstyle2: {
+    flex: 0.29,
+    marginHorizontal: pixelSizeHorizontal(24),
+    marginTop: pixelSizeVertical(16),
+  },
+  imgStyle: {
+    width: widthPixel(98),
+    height: heightPixel(82),
+    borderRadius: 5,
+  },
+  readStyle: {
+    color: COLORS.lightBlue,
+    fontSize: fontPixel(12),
+    fontFamily: FONT_FAMILY.plusJakartaSansBold,
+    marginLeft: fontPixel(12),
+  },
   btn: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -188,7 +180,6 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     height: 53,
   },
-
   priceTag: {
     height: heightPixel(40),
     alignItems: 'center',

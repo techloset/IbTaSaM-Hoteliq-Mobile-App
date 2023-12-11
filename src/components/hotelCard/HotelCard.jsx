@@ -22,6 +22,7 @@ import {
   pixelSizeHorizontal,
 } from '../../utils/ResponsiveStyle.js';
 import FONT_FAMILY from '../../consts/Fonts';
+import SCREENS from '../../library/SCREENS';
 
 const {width} = Dimensions.get('window');
 const cardWidth = width / 1.4;
@@ -34,7 +35,7 @@ export const HotelCard = ({hotel, showItems}) => {
         style={styles.cards}
         activeOpacity={1}
         onPress={() => {
-          navigation.navigate('Detail');
+          navigation.navigate(SCREENS.DETAIL);
         }}>
         <View style={styles.priceTag}>
           {showItems ? <HeartIcon /> : <Favorite />}

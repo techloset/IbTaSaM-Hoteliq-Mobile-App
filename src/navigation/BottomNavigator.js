@@ -2,26 +2,13 @@ import React from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import HomeScreen from '../screens/homeScreen/HomeScreen';
-import AccountScreen from '../screens/accountScreen/AccountScreen';
-import SchduleScreen from '../screens/schduleScreen/SchduleScreen';
-import profileScreen from '../screens/profileScreen/profileScreen';
-
-import HomeTab from '../components/homeTabBtn/HomeBtn';
-import ScheduleBtn from '../components/scheduleTabBtn/ScheduleBtn';
-import AccountBtn from '../components/accountTabBtn/accountTabBtn';
-import ProfileBtn from '../components/profileTabBtn/profileTabBtn';
-
-import BookMark from '../assets/svg/bookmark.svg';
-import Profile from '../assets/svg/profile.svg';
-import Calendar from '../assets/svg/calendar.svg';
-import House from '../assets/svg/Appointment.svg';
-
 import {
   heightPixel,
   pixelSizeVertical,
   pixelSizeHorizontal,
 } from '../utils/ResponsiveStyle';
+
+import BOTTOM_NAVIGATION from '../library/BOTTOM_NAVIGATION';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,39 +27,21 @@ const BottomNavigator = () => {
           paddingVertical: pixelSizeVertical(16),
         },
       }}>
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({focused}) => (focused ? <HomeTab /> : <House />),
-        }}
-      />
-      <Tab.Screen
-        name="Schedule"
-        component={SchduleScreen}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({focused}) => (focused ? <ScheduleBtn /> : <Calendar />),
-        }}
-      />
-      <Tab.Screen
-        name="Account"
-        component={AccountScreen}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({focused}) => (focused ? <AccountBtn /> : <BookMark />),
-        }}
-      />
-
-      <Tab.Screen
-        name="account"
-        component={profileScreen}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({focused}) => (focused ? <ProfileBtn /> : <Profile />),
-        }}
-      />
+      {BOTTOM_NAVIGATION.map((item, i) => {
+        return (
+          <Tab.Screen
+            key={i}
+            name={item.screenName}
+            component={item.component}
+            options={() => ({
+              tabBarLabel: '',
+              tabBarIcon: ({focused}) => {
+                return focused ? <item.icon /> : <item.iconImg />;
+              },
+            })}
+          />
+        );
+      })}
     </Tab.Navigator>
   );
 };

@@ -18,12 +18,7 @@ import {
 export const SearchButton = () => {
   return (
     <>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          gap: 12,
-        }}>
+      <View style={styles.mainStyle}>
         <Pressable style={styles.PressableHouse}>
           <House width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={{color: COLORS.white, fontSize: fontPixel(14)}}>
@@ -50,6 +45,11 @@ export const SearchButton = () => {
 };
 
 const styles = StyleSheet.create({
+  mainStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
   PressableHouse: {
     backgroundColor: COLORS.lightBlue,
     borderRadius: 8,
