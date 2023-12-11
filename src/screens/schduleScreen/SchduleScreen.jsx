@@ -46,15 +46,7 @@ const SchduleScreen = ({navigation}) => {
   return (
     <View style={{backgroundColor: 'white', flex: 1}}>
       <View style={styles.header}>
-        <View
-          style={{
-            borderColor: COLORS.borderGrey,
-            alignItems: 'center',
-            borderWidth: 1,
-            borderRadius: 8,
-            paddingVertical: pixelSizeVertical(8),
-            paddingHorizontal: pixelSizeHorizontal(8),
-          }}>
+        <View style={styles.setting}>
           <Back
             onPress={navigation.goBack}
             width={widthPixel(24)}
@@ -62,15 +54,7 @@ const SchduleScreen = ({navigation}) => {
           />
         </View>
         <Text style={styles.Toptext}>Schedule</Text>
-        <TouchableOpacity
-          style={{
-            borderColor: COLORS.borderGrey,
-            alignItems: 'center',
-            borderWidth: 1,
-            borderRadius: 8,
-            paddingVertical: pixelSizeVertical(8),
-            paddingHorizontal: pixelSizeHorizontal(8),
-          }}>
+        <TouchableOpacity style={styles.setting}>
           <Setting width={widthPixel(24)} height={heightPixel(24)} />
         </TouchableOpacity>
       </View>
@@ -86,23 +70,23 @@ const SchduleScreen = ({navigation}) => {
           }}>
           <Calendar
             theme={{
-              backgroundColor: '#f5f5ff80',
-              calendarBackground: '#f5f5ff80',
-              textSectionTitleColor: '#101010',
-              textSectionTitleDisabledColor: '#A7AFB2',
-              selectedDayTextColor: '#ffffff',
-              todayTextColor: 'white',
-              dayTextColor: '#101010',
-              textDisabledColor: '#A7AFB2',
-              dotColor: '#00adf5',
-              selectedDotColor: 'red',
-              arrowColor: '#4C4DDC',
-              disabledArrowColor: '#A7AFB2',
-              monthTextColor: '#101010',
-              indicatorColor: 'blue',
-              textDayFontFamily: 'Plus Jakarta Sans',
-              textMonthFontFamily: 'Plus Jakarta Sans',
-              textDayHeaderFontFamily: 'Plus Jakarta Sans',
+              backgroundColor: COLORS.lightGray,
+              calendarBackground: COLORS.lightGray,
+              textSectionTitleColor: COLORS.black,
+              textSectionTitleDisabledColor: COLORS.lightDarkGray,
+              selectedDayTextColor: COLORS.white,
+              todayTextColor: COLORS.blue,
+              dayTextColor: COLORS.black,
+              textDisabledColor: COLORS.lightDarkGray,
+              dotColor: COLORS.dotColor,
+              selectedDotColor: COLORS.red,
+              arrowColor: COLORS.$color,
+              disabledArrowColor: COLORS.lightDarkGray,
+              monthTextColor: COLORS.black,
+              indicatorColor: COLORS.blue,
+              textDayFontFamily: FONT_FAMILY.plusJakartaSansRegular,
+              textMonthFontFamily: FONT_FAMILY.plusJakartaSansRegular,
+              textDayHeaderFontFamily: FONT_FAMILY.plusJakartaSansRegular,
               textDayFontWeight: '500',
               textMonthFontWeight: 'bold',
               textDayHeaderFontWeight: '500',
@@ -143,6 +127,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginHorizontal: pixelSizeHorizontal(24),
     justifyContent: 'space-between',
+  },
+  setting: {
+    borderColor: COLORS.borderGrey,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 8,
+    paddingVertical: pixelSizeVertical(8),
+    paddingHorizontal: pixelSizeHorizontal(8),
   },
   Toptext: {
     color: COLORS.black,

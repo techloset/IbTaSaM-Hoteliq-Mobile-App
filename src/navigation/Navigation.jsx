@@ -90,7 +90,7 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        // initialRouteName={SCREENS.BOTTOM_NAVIGATOR}
+        initialRouteName={SCREENS.BOTTOM_NAVIGATOR}
         screenOptions={{headerShown: false}}>
         {STACK_NAVIGATION.map((item, index) => {
           return (
@@ -99,7 +99,7 @@ const Navigation = () => {
             name={item.screenName} component={item.component} />
           );
         })}
-        {/* <Stack.Screen name="Detail" component={DetailScreen} /> */}
+        <Stack.Screen name="Detail" component={DetailScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

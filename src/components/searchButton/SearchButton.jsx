@@ -26,15 +26,17 @@ export const SearchButton = () => {
         }}>
         <Pressable style={styles.PressableHouse}>
           <House width={widthPixel(20)} height={heightPixel(20)} />
-          <Text style={{color: COLORS.white, fontSize: fontPixel(14)}}>Hotel</Text>
+          <Text style={{color: COLORS.white, fontSize: fontPixel(14)}}>
+            Hotel
+          </Text>
         </Pressable>
-        <Pressable style={styles.PressableShop}>
+        <Pressable style={styles.PressableBtn}>
           <Shop width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
             Market
           </Text>
         </Pressable>
-        <Pressable style={styles.PressableCoffee}>
+        <Pressable style={styles.PressableBtn}>
           <Coffee width={widthPixel(20)} height={heightPixel(20)} />
           <Pressable>
             <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
@@ -57,21 +59,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: pixelSizeHorizontal(17),
     paddingVertical: pixelSizeVertical(8),
   },
-  PressableShop: {
+  PressableBtn: {
     backgroundColor: '#F5F5F5',
     borderRadius: 8,
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
-    paddingHorizontal: pixelSizeHorizontal(17),
-    paddingVertical: pixelSizeVertical(8),
-  },
-  PressableCoffee: {
-    backgroundColor: '#F5F5F5',
-    borderRadius: 8,
-    flexDirection: 'row',
-    gap: 8,
-    alignItems: 'center',
     paddingHorizontal: pixelSizeHorizontal(17),
     paddingVertical: pixelSizeVertical(8),
   },

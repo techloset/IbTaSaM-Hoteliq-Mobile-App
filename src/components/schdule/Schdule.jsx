@@ -27,43 +27,20 @@ export default function Schedule() {
                 style={styles.mainImg}
               />
             </View>
-            <View
-              style={{
-                flex: 2,
-                marginVertical: 17,
-                marginLeft: pixelSizeHorizontal(16),
-                marginRight: pixelSizeHorizontal(12),
-              }}>
+            <View style={styles.newData}>
               <View
                 style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text style={styles.dollersText}>Asteria hotel </Text>
                 <View style={{flexDirection: 'row'}}>
                   <Text style={styles.dollers}> $165,3 </Text>
-                  <Text
-                    style={{
-                      fontSize: fontPixel(14),
-                      color: COLORS.grey,
-                      alignSelf: 'center',
-                    }}>
-                    /night
-                  </Text>
+                  <Text style={styles.dollers1}>/night</Text>
                 </View>
               </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  gap: 8,
-                  paddingTop: pixelSizeVertical(8),
-                }}>
+              <View style={styles.look}>
                 <Slocation />
                 <Text style={styles.location}>Wilora NT 0872, Australia</Text>
               </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  gap: 8,
-                  paddingTop: pixelSizeVertical(8),
-                }}>
+              <View style={styles.look}>
                 <Scalender />
                 <Text style={styles.location}>27 October 2022</Text>
               </View>
@@ -79,43 +56,20 @@ export default function Schedule() {
                 style={styles.mainImg}
               />
             </View>
-            <View
-              style={{
-                flex: 2,
-                marginVertical: 17,
-                marginLeft: pixelSizeHorizontal(16),
-                marginRight: pixelSizeHorizontal(12),
-              }}>
+            <View style={styles.newData}>
               <View
                 style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Text style={styles.dollersText}>Golden Pelece </Text>
                 <View style={{flexDirection: 'row'}}>
                   <Text style={styles.dollers}> $175,3 </Text>
-                  <Text
-                    style={{
-                      fontSize: fontPixel(14),
-                      color: COLORS.grey,
-                      alignSelf: 'center',
-                    }}>
-                    /night
-                  </Text>
+                  <Text style={styles.dollers1}>/night</Text>
                 </View>
               </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  gap: 8,
-                  paddingTop: pixelSizeVertical(8),
-                }}>
+              <View style={styles.look}>
                 <Slocation />
                 <Text style={styles.location}>Wilora NT 0872, Australia</Text>
               </View>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  gap: 8,
-                  paddingTop: pixelSizeVertical(8),
-                }}>
+              <View style={styles.look}>
                 <Scalender />
                 <Text style={styles.location}>27 October 2022</Text>
               </View>
@@ -152,6 +106,11 @@ const styles = StyleSheet.create({
     fontSize: fontPixel(14),
     fontFamily: FONT_FAMILY.plusJakartaSansBold,
   },
+  dollers1: {
+    fontSize: fontPixel(14),
+    color: COLORS.grey,
+    alignSelf: 'center',
+  },
   main: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -182,5 +141,16 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     resizeMode: 'contain',
     marginVertical: 12,
+  },
+  newData: {
+    flex: 2,
+    marginVertical: 17,
+    marginLeft: pixelSizeHorizontal(16),
+    marginRight: pixelSizeHorizontal(12),
+  },
+  look: {
+    flexDirection: 'row',
+    gap: 8,
+    paddingTop: pixelSizeVertical(8),
   },
 });

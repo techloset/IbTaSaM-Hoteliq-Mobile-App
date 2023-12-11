@@ -14,8 +14,10 @@ const COLORS = {
   headerBG: '#E8EDFF',
   homeBtnColor: '#F5F5FF',
   bt: 'rgba(245, 245, 255, 0.9)',
+  lightGray: '#f5f5ff80',
+  lightDarkGray: '#A7AFB2',
+  dotColor: '#00adf5',
+  blue: 'blue',
 };
 
 export default COLORS;
-
-

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import {View, Text, Image, StyleSheet, Dimensions} from 'react-native';
 
 import COLORS from '../../consts/Color';
 import Star from '../../assets/svg/star.svg';
@@ -18,7 +12,6 @@ import {
 } from '../../utils/ResponsiveStyle.js';
 import FONT_FAMILY from '../../consts/Fonts';
 
-const {width} = Dimensions.get('window');
 const {height} = Dimensions.get('window');
 export default function Destination() {
   return (
@@ -31,13 +24,7 @@ export default function Destination() {
 
         <View style={styles.maindest}>
           <View
-            style={{
-              flex: 0,
-              padding: pixelSizeHorizontal(12),
-              paddingBottom:
-                height >= 670 ? pixelSizeVertical(0) : pixelSizeVertical(12),
-              flexDirection: 'row',
-            }}>
+            style={styles.maindest1}>
             <View style={{height: heightPixel(84), width: widthPixel(84)}}>
               <Image
                 source={require('../../assets/img/desti.png')}
@@ -135,8 +122,14 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     height: heightPixel(108),
   },
+  maindest1: {
+    flex: 0,
+    padding: pixelSizeHorizontal(12),
+    paddingBottom: height >= 670 ? pixelSizeVertical(0) : pixelSizeVertical(12),
+    flexDirection: 'row',
+  },
   mainImg: {
-    width: "100%",
+    width: '100%',
     height: '100%',
     borderRadius: 4,
     resizeMode: 'contain',

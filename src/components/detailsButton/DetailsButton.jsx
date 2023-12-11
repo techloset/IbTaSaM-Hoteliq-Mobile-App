@@ -17,15 +17,15 @@ const DetailsButton = () => {
   return (
     <>
       <View style={{flexDirection: 'row', gap: 8}}>
-        <TouchableOpacity style={styles.PressableHouse}>
+        <TouchableOpacity style={styles.btn}>
           <Wifi width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={styles.text}>Free Wifi </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.PressableShop}>
+        <TouchableOpacity style={styles.btn}>
           <Coffee1 width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={styles.text}>Free Breakfast</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.PressableCoffee}>
+        <TouchableOpacity style={styles.btn}>
           <Star width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={styles.text}>5.0 </Text>
         </TouchableOpacity>
@@ -37,21 +37,7 @@ const DetailsButton = () => {
 export default DetailsButton;
 
 const styles = StyleSheet.create({
-  PressableHouse: {
-    backgroundColor: COLORS.bt,
-    borderRadius: 8,
-    flexDirection: 'row',
-    paddingHorizontal: pixelSizeHorizontal(12),
-    paddingVertical: pixelSizeVertical(9),
-  },
-  PressableShop: {
-    backgroundColor: COLORS.bt,
-    borderRadius: 8,
-    flexDirection: 'row',
-    paddingHorizontal: pixelSizeHorizontal(12),
-    paddingVertical: pixelSizeVertical(9),
-  },
-  PressableCoffee: {
+  btn: {
     backgroundColor: COLORS.bt,
     borderRadius: 8,
     flexDirection: 'row',
