@@ -1,6 +1,7 @@
 const SCREENS = {
-  DETAIL: 'detail',
+  SPLASH: 'splash',
   BOTTOM_NAVIGATOR: 'BottomNavigator',
+  DETAIL: 'detail',
   // BOTTOM_NAVIGATOR
   HOME: 'home',
   SCHDULE: 'schdule',

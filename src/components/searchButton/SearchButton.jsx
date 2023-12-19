@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Pressable, Text} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 import House from '../../assets/svg/house.svg';
 import Shop from '../../assets/svg/shop.svg';
@@ -19,26 +19,24 @@ export const SearchButton = () => {
   return (
     <>
       <View style={styles.mainStyle}>
-        <Pressable style={styles.PressableHouse}>
+        <TouchableOpacity style={styles.PressableHouse}>
           <House width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={{color: COLORS.white, fontSize: fontPixel(14)}}>
             Hotel
           </Text>
-        </Pressable>
-        <Pressable style={styles.PressableBtn}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.PressableBtn}>
           <Shop width={widthPixel(20)} height={heightPixel(20)} />
           <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
             Market
           </Text>
-        </Pressable>
-        <Pressable style={styles.PressableBtn}>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.PressableBtn}>
           <Coffee width={widthPixel(20)} height={heightPixel(20)} />
-          <Pressable>
-            <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
-              Coffee
-            </Text>
-          </Pressable>
-        </Pressable>
+          <Text style={{fontSize: fontPixel(14), color: COLORS.grey}}>
+            Coffee
+          </Text>
+        </TouchableOpacity>
       </View>
     </>
   );

@@ -31,16 +31,7 @@ import FONT_FAMILY from '../../consts/Fonts';
 import SCREENS from '../../library/SCREENS';
 
 export default function DetailScreen({navigation}) {
-  const [text, setText] = useState(
-    'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming ',
-  );
-
-  const onPressTitle = () => {
-    setText(
-      'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. ',
-    );
-  };
-
+  const [text, setText] = useState(true);
   return (
     <View style={{flex: 1, backgroundColor: 'white'}}>
       <View style={styles.header}>
@@ -112,9 +103,13 @@ export default function DetailScreen({navigation}) {
 
         <View style={styles.text}>
           <Text style={styles.d6}>Description</Text>
-          <Text style={styles.d7} onPress={onPressTitle}>
-            {text}
-            <Text style={styles.readStyle}>Read More. . .</Text>
+          <Text style={styles.d7} onPress={() => setText(!text)}>
+            {text
+              ? 'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming '
+              : 'Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. elegant 5 star hotel overlooking the sea. perfect for a romantic, charming Aston Hotel, Alice Springs NT 0870, Australia is a modern hotel. '}
+            <Text style={styles.readStyle}>
+              {text ? 'Read More. . .' : 'Read Less'}
+            </Text>
           </Text>
         </View>
       </View>

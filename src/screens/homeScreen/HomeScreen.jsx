@@ -32,13 +32,7 @@ export default HomeScreen = () => {
   const handleSlideIconPress = () => {
     setShowItems(!showItems);
   };
-
   const [showView, setShowView] = useState(false);
-
-  const handleShowView = () => {
-    setShowView(!showView);
-  };
-
   return (
     <>
       <StatusBar
@@ -54,7 +48,10 @@ export default HomeScreen = () => {
               <View style={styles.Location1}>
                 <Location style={{marginTop: 5}} />
                 <Text style={styles.innerText}>Wallace, Australia</Text>
-                <ArrowDown style={{marginTop: 5}} onPress={handleShowView} />
+                <ArrowDown
+                  style={{marginTop: 5}}
+                  onPress={() => setShowView(!showView)}
+                />
               </View>
             </View>
             <View style={styles.notiStyle}>
