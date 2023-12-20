@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName={SCREENS.SPLASH}
+        initialRouteName={SCREENS.BOTTOM_NAVIGATOR}
         screenOptions={{headerShown: false}}>
         {STACK_NAVIGATION.map((item, index) => {
           return (
